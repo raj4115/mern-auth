@@ -60,7 +60,14 @@ class App extends Component {
                 {this.state.books.map(book => (
                   <tr>
                     <td>
-                      <Link to={`/show/${book._id}`}>{book.isbn}</Link>
+                      <Link
+                        to={{
+                          pathname: `/show/${book._id}`,
+                          state: book
+                        }}
+                      >
+                        {book.isbn}
+                      </Link>
                     </td>
                     <td>{book.title}</td>
                     <td>{book.author}</td>
