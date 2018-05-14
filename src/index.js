@@ -10,6 +10,7 @@ import Login from './components/Login';
 import Register from './components/Register';
 import Newbook from './components/Newbook';
 import Book from './components/Book';
+import Editbook from './components/Editbook';
 
 ReactDOM.render(
     <Router>
@@ -19,6 +20,7 @@ ReactDOM.render(
             <Route exact path='/register' component={Register} />
             <Route exact path='/books/new' component={Newbook} />
             <Route exact path='/show/:id' component={Book} />
+            <Route exact path='/edit/:id' component={Editbook} />
         </div>
     </Router>
     , document.getElementById('root'));
